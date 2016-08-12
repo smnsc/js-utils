@@ -57,7 +57,7 @@ function fillDropdown(data) {
                             .text(data.textAttr ? this[data.textAttr] : this.Text)
                             .appendTo(ddl);
 
-                        if ((data.selectVal || ddl.data("value")) == this.Value) {
+                        if ((data.selectVal || ddl.data("value")) == opt.prop('value')) {
                             opt.attr("selected", "selected");
                             ddl.trigger("change");
                         }
